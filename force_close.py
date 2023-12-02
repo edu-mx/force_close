@@ -11,13 +11,14 @@ def close_app(app):
     return
 
 def main():
-    print('force close;'.title())
+    os.system('title Force Close')
     while True:
-        exe = input('Qual o nome do executável do programa que deseja fechar?')
-
+        exe = input('Qual o nome do executável do programa que deseja fechar?\n\nDigite (n) para nenhum')
+        os.system('cls')
         if '.' in exe:
             close_app(exe)
-
+        elif exe.lower() == 'n':
+            break
         else:
             print('Nome inválido.')
             bp(600, 1000)
